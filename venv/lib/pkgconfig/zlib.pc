@@ -1,0 +1,13 @@
+prefix=/home/dhatri/Data Science project/venv
+exec_prefix=/home/dhatri/Data Science project/venv
+libdir=/home/dhatri/Data Science project/venv/lib
+sharedlibdir=/home/dhatri/Data Science project/venv/lib
+includedir=/home/dhatri/Data Science project/venv/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
