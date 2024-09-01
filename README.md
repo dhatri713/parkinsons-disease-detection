@@ -1,1 +1,1 @@
-## Learning how to create and End to End project in Data Science. Will add more information later.
+## Learning how to create an End to End project in Data Science. Will add more information later.
