@@ -17,6 +17,5 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s"  # Log message format
 )
 
-# Example usage
-if __name__ == "__main__":
-    logging.info("Logging has started 2.0")
+# if __name__ == "__main__":
+#     logging.info("Logging has started 2.0")
