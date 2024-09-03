@@ -3,5 +3,8 @@ numpy
 seaborn
 sklearn
 xgboost
+pylab
+seaborn
+warnings
 
 -e .
