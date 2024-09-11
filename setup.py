@@ -17,7 +17,7 @@ def get_requirements(file_path: str)->List[str]:
     return requirements
 
 setup(
-    name = 'e2eproject',
+    name = 'parkinsons-disease-detection',
     version = '0.0.1',
     author = 'Dhatri',
     author_email = 'dhatrimanaswini@gmail.com',
