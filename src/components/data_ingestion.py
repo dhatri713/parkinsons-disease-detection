@@ -3,6 +3,8 @@ import sys
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 import pandas as pd
+from data_transformation import DataTransformation, DataTransformationConfig
+from model_trainer import ModelTrainer, ModelTrainerConfig
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 from src.logger import logging
@@ -57,3 +59,9 @@ class DataIngestion:
 if __name__ == "__main__":
     ingestor = DataIngestion()
     train_data, test_data = ingestor.start_data_ingestion()
+
+    data_transformation=DataTransformation()
+    train_arr,test_arr,_=data_transformation.initiate_data_transformation(train_data,test_data)
+
+    model_trainer = ModelTrainer()
+    print(model_trainer.initiate_model_trainer(train_arr, test_arr))
