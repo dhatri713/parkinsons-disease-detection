@@ -6,12 +6,12 @@ from sklearn.preprocessing import StandardScaler
 from src.pipeline.predict_pipeline import CustomData, PredictPipeline
 
 application = Flask(__name__)
-app = application
+# app = application
 # @app.route('/')
 # def index():
 #     return render_template('index.html')
 
-@app.route('/', methods=['GET', 'POST'])
+@application.route('/', methods=['GET', 'POST'])
 def predict():
     if request.method=='GET':
         return render_template('index.html')
@@ -52,4 +52,4 @@ def predict():
         return render_template('index.html', res=res)
 
 if __name__=="__main__":
-    app.run(host="0.0.0.0")        
+    application.run(host="0.0.0.0")        
