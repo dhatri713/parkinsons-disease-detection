@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkinson's Disease Detection</title>
+</head>
+
+<body>
+    <h1>Parkinson Disease Detection based on Acoustic Features</h1>
+    <form action="{{ url_for('predict')}}" method="post">
+
+        <div class="form-group">
+            <label for="fo">Fundamental Frequency (Hz)</label>
+            <input type="number" id="fo" name="fo" required step="0.0000001">
+        </div>
+        <div class="form-group">
+            <label for=fhi">Maximum Fundamental Frequency (Hz)</label>
+            <input type="number" id="fhi" name="fhi" required step="0.0000001">
+        </div>
+        <div class="form-group">
+            <label for="flo">Minimum Fundamental Frequency (Hz)</label>
+            <input type="number" id="flo" name="flo" required step="0.0000001">
+        </div>
+        <div class="form-group">
+            <label for="jitter">Jitter (Percent)</label>
+            <input type="number" id="jitter" name="jitter" required step="0.0000001">
+        </div>
+        <div class="form-group">
+            <label for="absjitter">Absolute Jitter</label>
+            <input type="number" id="absjitter" name="absjitter" required step="0.0000001">
+        </div>
+        <div class="form-group">
+            <label for="rap">Relative Average Perturbation</label>
+            <input type="number" id="rap" name="rap" required step="0.0000001">
+        </div>
+        <div class="form-group">
+            <label for="ppq">Pitch Period Perturbation Quotient</label>
+            <input type="number" id="ppq" name="ppq" required step="0.0000001">
+        </div>
+        <div class="form-group">
+            <label for="ddp">Difference of Difference of Periods</label>
+            <input type="number" id="ddp" name="ddp" required step="0.0000001">
+        </div>
+        <div class="form-group">
+            <label for="shimmer">Shimmer (Amplitude Variation)</label>
+            <input type="number" id="shimmer" name="shimmer" required step="0.0000001">
+        </div>
+        <div class="form-group">
+            <label for="shimmerdb">Shimmer in decibels (dB)</label>
+            <input type="number" id="shimmerdb" name="shimmerdb" required step="0.0000001">
+        </div>
+        <div class="form-group">
+            <label for="apq3">Three-Point Amplitude Perturbation Quotient</label>
+            <input type="number" id="apq3" name="apq3" required step="0.0000001">
+        </div>
+        <div class="form-group">
+            <label for="apq5">Five-Point Amplitude Perturbation Quotient</label>
+            <input type="number" id="apq5" name="apq5" required step="0.0000001">
+        </div>
+        <div class="form-group">
+            <label for="apq">Amplitude Perturbation Quotient</label>
+            <input type="number" id="apq" name="apq" required step="0.0000001">
+        </div>
+        <div class="form-group">
+            <label for="dda">Average Absolute Differences of Amplitudes</label>
+            <input type="number" id="dda" name="dda" required step="0.0000001">
+        </div>
+        <div class="form-group">
+            <label for="nhr">Noise-to-Harmonic Ratio</label>
+            <input type="number" id="nhr" name="nhr" required step="0.0000001">
+        </div>
+        <div class="form-group">
+            <label for="hnr">Harmonics-to-Noise Ratio</label>
+            <input type="number" id="hnr" name="hnr" required step="0.0000001">
+        </div>
+        <div class="form-group">
+            <label for="rpde">Recurrence Period Density Entropy</label>
+            <input type="number" id="rpde" name="rpde" required step="0.0000001">
+        </div>
+        <div class="form-group">
+            <label for="dfa">Detrended Fluctuation Analysis</label>
+            <input type="number" id="dfa" name="dfa" required step="0.0000001">
+        </div>
+        <div class="form-group">
+            <label for="spread1">First Spread Measure</label>
+            <input type="number" id="spread1" name="spread1" required step="0.0000001">
+        </div>
+        <div class="form-group">
+            <label for="spread2">Second Spread Measure</label>
+            <input type="number" id="spread2" name="spread2" required step="0.0000001">
+        </div>
+        <div class="form-group">
+            <label for="d2">Correlation Dimension</label>
+            <input type="number" id="d2" name="d2" required step="0.0000001">
+        </div>
+        <div class="form-group">
+            <label for="ppe">Pitch Period Entropy:</label>
+            <input type="number" id="ppe" name="ppe" required step="0.0000001">
+        </div>
+        </div>
+        <div class="form-group"></div>
+        <input class="btn btn-primary" type="submit" value="Predict the presence of the disease" required />
+        </div>
+    </form>
+
+    <h2>Status of Parkinson's Disease: {{ res }}</h2>
+
+
+</body>
+
+</html>

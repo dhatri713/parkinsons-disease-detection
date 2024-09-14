@@ -1,10 +1,10 @@
 pandas
 numpy
 seaborn
-sklearn
+scikit-learn
 xgboost
-pylab
 seaborn
-warnings
+dill
+flask
 
 -e .
